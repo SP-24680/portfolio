@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swetha's Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin: 0;
+                font-family:"Segoe UI",sans-serif;
+                background-color: #f7f7f7;
+            }
+            header{
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            h1{
+                animation: glow 2s ease-in-out infinite alternate;
+            }
+            .projects-section
+            {
+                padding: 50px;
+            }
+            .projects-section h2{
+                text-align: center;
+                margin-bottom:40px ;
+            }
+            .project-grid{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 30px;
+                max-width:1000px;
+                margin: 0 auto;
+            }
+            .project-card{
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1) ;
+                animation: slideUp 0.8s ease-in-out;
+            }
+            .project-card h3{
+                margin-top: 0;
+            }
+            .project-card p{
+                font-size: 14px;
+            }
+            .tech-used{
+                font-style: italic;
+                color: #555;
+                margin-bottom: 10px;
+            }
+            .btn{
+                background-color: #ff4d88;
+                color: white;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+            .btn:hover{
+                background-color: #cc0066;
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            }
+            @media(max-width:768px)
+            {
+                .project-grid{
+                    grid-template-columns: 1fr;
+                }
+                .projects-section{
+                    padding: 20px;
+                }
+                .project-card{
+                    padding: 15px;
+                }
+                header h1{
+                    font-size: 24px;
+                }
+                .projects-section h2{
+                    font-size: 20px;
+                }
+                .btn{
+                    font-size: 13px;
+                    padding: 6px 10px;
+                }
+            }
+            @keyframes slideUp{
+                0%{
+                   transform: translateY(50px);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes glow{
+                from{
+                    text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff33cc;
+                }
+                to{
+                    text-shadow: 0 0 10px #ff99cc,0 0 30px #ff99cc;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Projects 🚀</h1>
+        </header>
+        <section class="projects-section">
+            <h2>Frontend Projects 💻</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Contact Form 📞</h3>
+                    <p class="tech-used">HTML, CSS</p>
+                    <p>A clean and responsive contact form with inputs and dropdowns.</p>
+                    <a href="/day2(form).html" class="btn">View Page</a>
+                </div>
+                <div class="project-card">
+                    <h3>About Me Layout 👩🏻‍💻</h3>
+                    <p class="tech-used">HTML, CSS (Flexbox)</p>
+                    <p>A neat About Me section using Flexbox layout with image and text.</p>
+                    <a href="/day4(flexbox).html" class="btn">View Page</a>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Home 🌍</h3>
+                    <p class="tech-used">HTML, Semantic Tags</p>
+                    <p>The homepage of my portfolio using proper semantic HTML structure.</p>
+                    <a href="/day3(semantic).html" class="btn">View Page</a>
+                </div>
+                <div class="project-card">
+                    <h3>Coming Soon...😇</h3>
+                    <p class="tech-used">React (upcoming)</p>
+                    <p>This slot is ready for the exiciting React apps I'll build 🔜!</p>
+                    <a href="#" class="btn">Stay Tuned</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
